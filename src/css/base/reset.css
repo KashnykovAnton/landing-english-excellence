@@ -34,6 +34,10 @@ img {
   height: auto;
 }
 
+address {
+  font-style: normal;
+}
+
 .list {
   list-style: none;
 }
@@ -42,7 +46,6 @@ img {
   text-decoration: none;
   cursor: pointer;
 }
-
 
 .custom-ol {
   counter-reset: item;
@@ -59,4 +62,3 @@ img {
   font-weight: 700;
   /* Add spacing between the number and content */
 }
-
