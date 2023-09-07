@@ -1,8 +1,8 @@
+#contact .section-description {
+  margin-bottom: 20px;
+}
 .application-remark-wrapper {
   display: none;
-}
-.application .section-description {
-  margin-bottom: 20px;
 }
 .application-input-label {
   display: block;
@@ -183,6 +183,12 @@
   background-color: transparent;
   text-decoration: underline;
   color: inherit;
+  transition: color var(--transition-duration-time-function);
+}
+
+.application-helper-link:hover,
+.application-helper-link:focus {
+  color: var(--hover-focus-color);
 }
 
 /* ! Before tablet */
@@ -196,9 +202,7 @@
 /* ! Tablet */
 
 @media screen and (min-width: 768px) {
-  .application .section-description {
-    margin-right: auto;
-    margin-left: auto;
+  #contact .section-description {
     max-width: 586px;
     margin-bottom: 64px;
   }
@@ -243,6 +247,9 @@
 /* ! Desktop */
 
 @media screen and (min-width: 1280px) {
+  #contact .section-description {
+    max-width: 709px;
+  }
   .application-data {
     display: flex;
     gap: 32px;

@@ -1,33 +1,30 @@
-.about-us .section-description {
+#about .section-description {
   max-width: 658px;
-  margin-inline: auto;
 }
 
-.about-us-content {
+.about-content {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.about-us-list {
+.about-list {
   counter-reset: item;
   list-style-type: none;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  width: 100%;
   padding: 0;
   margin: 0;
 }
 
-.about-us-item {
-  width: 100%;
+.about-item {
   padding: 32px;
   background-color: var(--gray);
   border-radius: 16px;
 }
 
-.about-us-item::before {
+.about-item::before {
   display: block;
   content: counter(item, decimal-leading-zero);
   counter-increment: item;
@@ -36,56 +33,58 @@
   font-weight: 700;
   font-size: 28px;
   line-height: 1.14;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.035em;
 }
 
-.about-us-item-text {
+.about-item-text {
+  font-size: 20px;
   font-weight: 700;
-  font-size: 18px;
-  line-height: 1.33;
-  letter-spacing: -0.02em;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 
-.about-us-image {
+.about-image {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 313px;
   padding: 70px 0;
   background-color: var(--green);
-  border-radius: 30px;
+  border-radius: 16px;
 }
 
 @media screen and (min-width: 768px) {
+  .about-content {
+    gap: 32px;
+    border-radius: 30px;
 
-  .about-us-content { gap: 32px }
+  }
 
-  .about-us-list { gap: 32px }
+  .about-list {
+    gap: 32px;
+  }
 
-  .about-us-item {
-    width: 335px;
+  .about-item {
+    flex-basis: calc((100% - 32px) / 2);
     border-radius: 30px;
   }
 
-  .about-us-image {
-    width: 100%;
-    height: 243px;
-    padding: 16px 0;
+  .about-image {
+    padding: 35px 0;
+    border-radius: 30px;
   }
 }
 
 @media screen and (min-width: 1280px) {
+  .about-content {
+    flex-direction: row;
+  }
 
-  .about-us-content { flex-direction: row }
+  .about-list {
+    max-width: 682px;
+  }
 
-  .about-us-list { width: 682px }
-
-  .about-us-item { width: 325px }
-
-  .about-us-image {
-    width: 310px;
-    height: auto;
-    padding: 51px 0;
+  .about-image {
+    flex-grow: 1;
+    padding: 90px 0;
   }
 }
