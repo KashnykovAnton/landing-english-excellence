@@ -50,9 +50,6 @@
 
 .close-button {
   margin-left: auto;
-  border: none;
-  background-color: transparent;
-  padding: 0;
   line-height: 0;
 }
 
@@ -74,9 +71,7 @@
 
 .burger-button {
   width: 32px;
-  height: 32px;
-  background-color: transparent;
-  border: none;
+  height: 27px;
 }
 
 .burger-icon {

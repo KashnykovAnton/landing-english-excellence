@@ -109,9 +109,6 @@
 }
 
 .footer-info-btn {
-  padding: 0;
-  border: none;
-  background-color: transparent;
   transition: color var(--transition-duration-time-function);
 }
 

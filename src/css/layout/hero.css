@@ -1,22 +1,22 @@
-.hero {
+.hero-section {
   max-width: 375px;
-  padding-left: 20px;
+  padding-top: 8px;
   padding-right: 20px;
-  margin-top: 8px;
+  padding-bottom: 40px;
+  padding-left: 20px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 40px;
 }
 
 .hero-container {
   position: relative;
-  max-width: 335px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 709px;
-
   padding: 0 20px 72px 20px;
   border-radius: 16px;
-
-  background-color: #d9d9d9;
+  background-color: var(--hero-bg-color);
   background-image: linear-gradient(
       57deg,
       rgba(0, 0, 0, 0.4) 0%,
@@ -26,11 +26,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
 }
 
 @media screen and (min-resolution: 192dpi),
@@ -46,35 +41,31 @@
   }
 }
 
-.hero-header {
-  color: var(--white);
-  font-size: 38px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 1.05;
-
+.hero-headline {
   margin-bottom: 40px;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.0526;
+  color: var(--white);
 }
 
-.hero-header-second-style {
+.hero-headline-second-style {
   color: var(--header-second-style-color);
 }
 
 .scroll-to-application {
   display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 295px;
   padding-top: 14px;
   padding-bottom: 14px;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--green);
-  border-radius: 12px;
-
-  color: var(--white);
   font-size: 14px;
   font-weight: 700;
-  line-height: 1.71;
-
+  line-height: 1.7143;
+  color: var(--white);
+  border-radius: 12px;
+  background-color: var(--green);
   transition: background-color var(--transition-duration-time-function);
 }
 
@@ -87,30 +78,27 @@
   position: absolute;
   bottom: 14px;
   right: 14px;
-
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  background-color: var(--white);
-  flex-shrink: 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
+  width: 38px;
+  height: 38px;
+  color: var(--green);
+  border-radius: 50%;
+  background-color: var(--white);
   transition: background-color var(--transition-duration-time-function);
 }
 
 .scroll-to-footer-icon {
   width: 20px;
   height: 20px;
-  fill: var(--green);
+  fill: currentColor;
   transition: fill var(--transition-duration-time-function);
 }
 
 .scroll-to-footer:hover,
 .scroll-to-footer:focus {
-  background-color: var(--green);
+  background-color: currentColor;
 }
 
 .scroll-to-footer:hover .scroll-to-footer-icon,
@@ -121,19 +109,17 @@
 @media screen and (min-resolution: 98dpi) and (min-width: 768px),
   screen and (min-resolution: 1dppx) and (min-width: 768px),
   screen and (min-device-pixel-ratio: 1) and (min-width: 768px) {
-  .hero {
+  .hero-section {
     max-width: 768px;
-    padding-left: 32px;
+    padding-top: 32px;
     padding-right: 32px;
-    margin-top: 32px;
-    margin-bottom: 53px;
+    padding-left: 32px;
+    padding-bottom: 50px;
   }
 
   .hero-container {
-    max-width: 704px;
     height: 857px;
-    padding: 0 32px 35px;
-
+    padding: 0 32px 295px 32px;
     background-image: linear-gradient(
         112deg,
         rgba(0, 0, 0, 0.4),
@@ -141,32 +127,26 @@
       ),
       url('../../images/hero/hero-tablet@1x.jpg');
     border-radius: 30px;
-
-    justify-content: center;
   }
 
-  .hero-header {
-    width: 488px;
-    font-size: 60px;
-    line-height: 1.167;
-
+  .hero-headline {
+    max-width: 488px;
     margin-bottom: 32px;
+    font-size: 60px;
+    line-height: 1.1667;
   }
 
   .scroll-to-application {
-    max-width: none;
-    width: 306px;
+    max-width: 306px;
     padding-top: 16px;
     padding-bottom: 16px;
-
     font-size: 18px;
-    line-height: 1.56;
+    line-height: 1.5556;
   }
 
   .scroll-to-footer {
     bottom: 32px;
     right: 32px;
-
     width: 48px;
     height: 48px;
   }
@@ -193,19 +173,17 @@
 @media screen and (min-resolution: 98dpi) and (min-width: 1280px),
   screen and (min-resolution: 1dppx) and (min-width: 1280px),
   screen and (min-device-pixel-ratio: 1) and (min-width: 1280px) {
-  .hero {
+  .hero-section {
     max-width: 1280px;
-    padding-left: 64px;
+    padding-top: 16px;
     padding-right: 64px;
-    margin-top: 16px;
-    margin-bottom: 21px;
+    padding-bottom: 21px;
+    padding-left: 64px;
   }
 
   .hero-container {
-    max-width: 1152px;
     height: 629px;
-    padding: 0 0 0 64px;
-
+    padding: 0 64px 163px 64px;
     background-image: linear-gradient(
         114deg,
         rgba(0, 0, 0, 0.4) 0%,
@@ -214,8 +192,8 @@
       url('../../images/hero/hero-decktop@1x.jpg');
   }
 
-  .hero-header {
-    width: 564px;
+  .hero-headline {
+    max-width: 564px;
   }
 }
 
