@@ -1,12 +1,17 @@
 html {
   scroll-behavior: smooth;
 }
+
 body {
+  position: relative;
   font-family: var(--main-font);
   font-size: 16px;
-  background-color: var(--white);
   color: var(--black);
-  position: relative;
+  background-color: var(--white);
+}
+
+.prevent-scroll {
+  overflow: hidden;
 }
 
 .section-headline {
@@ -58,6 +63,38 @@ body {
   color: var(--green);
 }
 
+.scroll-btn {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  color: var(--green);
+  border-radius: 50%;
+  background-color: var(--white);
+  transition: background-color var(--transition-duration-time-function);
+}
+
+.scroll-btn-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: fill var(--transition-duration-time-function);
+}
+
+.scroll-btn:hover,
+.scroll-btn:focus {
+  background-color: currentColor;
+}
+
+.scroll-btn:hover .scroll-btn-icon,
+.scroll-btn:focus .scroll-btn-icon {
+  fill: var(--white);
+}
+
 @media screen and (min-width: 768px) {
   .section-headline {
     font-size: 40px;
@@ -75,5 +112,17 @@ body {
     margin-bottom: 64px;
     font-size: 18px;
     line-height: 1.67;
+  }
+
+  .scroll-btn {
+    bottom: 32px;
+    right: 32px;
+    width: 48px;
+    height: 48px;
+  }
+
+  .scroll-btn-icon {
+    width: 24px;
+    height: 24px;
   }
 }

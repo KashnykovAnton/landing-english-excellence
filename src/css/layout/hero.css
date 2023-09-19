@@ -74,38 +74,6 @@
   background-color: var(--hover-focus-color);
 }
 
-.scroll-to-footer {
-  position: absolute;
-  bottom: 14px;
-  right: 14px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 38px;
-  height: 38px;
-  color: var(--green);
-  border-radius: 50%;
-  background-color: var(--white);
-  transition: background-color var(--transition-duration-time-function);
-}
-
-.scroll-to-footer-icon {
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
-  transition: fill var(--transition-duration-time-function);
-}
-
-.scroll-to-footer:hover,
-.scroll-to-footer:focus {
-  background-color: currentColor;
-}
-
-.scroll-to-footer:hover .scroll-to-footer-icon,
-.scroll-to-footer:focus .scroll-to-footer-icon {
-  fill: var(--white);
-}
-
 @media screen and (min-resolution: 98dpi) and (min-width: 768px),
   screen and (min-resolution: 1dppx) and (min-width: 768px),
   screen and (min-device-pixel-ratio: 1) and (min-width: 768px) {
@@ -142,18 +110,6 @@
     padding-bottom: 16px;
     font-size: 18px;
     line-height: 1.5556;
-  }
-
-  .scroll-to-footer {
-    bottom: 32px;
-    right: 32px;
-    width: 48px;
-    height: 48px;
-  }
-
-  .scroll-to-footer-icon {
-    width: 24px;
-    height: 24px;
   }
 }
 

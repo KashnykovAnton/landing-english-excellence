@@ -17,7 +17,7 @@
   height: 100%;
   background-color: rgba(18, 20, 23, 0.4);
   z-index: 1000;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  transition: opacity var(--transition-duration-time-function);
   opacity: 1;
   pointer-events: auto;
 }
@@ -41,7 +41,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition: right 0.5s ease;
+  transition: right var(--transition-duration-time-function);
 }
 
 .side-menu.is-hidden {
@@ -125,7 +125,7 @@
   width: 0;
   height: 2px;
   background-color: var(--green);
-  transition: width 0.3s ease, left 0.3s ease;
+  transition: width var(--transition-duration-time-function), left var(--transition-duration-time-function);
 }
 
 .site-nav-link:hover::after {

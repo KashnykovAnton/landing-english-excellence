@@ -2,6 +2,10 @@
   max-width: 658px;
 }
 
+.about-us-container {
+  position: relative;
+}
+
 .about-content {
   display: flex;
   flex-direction: column;
@@ -52,11 +56,34 @@
   border-radius: 16px;
 }
 
+.scroll-to-top {
+  position: fixed;
+  background-color: var(--green);
+  opacity: 1;
+  pointer-events: auto;
+  transition: all var(--transition-duration-time-function);
+}
+
+.scroll-to-top.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-to-top:active {
+  transform: scale(1.2);
+  transition: transform var(--transition-duration-time-function);
+}
+
+.scroll-to-top-icon {
+  fill: var(--white);
+  transform: rotate(180deg);
+}
+
 @media screen and (min-width: 768px) {
   .about-content {
     gap: 32px;
     border-radius: 30px;
-
   }
 
   .about-list {
