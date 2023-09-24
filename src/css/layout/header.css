@@ -7,6 +7,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
 }
 
 .backdrop {
@@ -15,8 +16,8 @@
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(18, 20, 23, 0.4);
-  z-index: 1000;
+  background-color: var(--backdrop);
+  z-index: 50;
   transition: opacity var(--transition-duration-time-function);
   opacity: 1;
   pointer-events: auto;
@@ -37,7 +38,7 @@
   height: 100vh;
   padding: 20px;
   background-color: var(--green);
-  z-index: 1000;
+  z-index: 60;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -125,7 +126,8 @@
   width: 0;
   height: 2px;
   background-color: var(--green);
-  transition: width var(--transition-duration-time-function), left var(--transition-duration-time-function);
+  transition: width var(--transition-duration-time-function),
+    left var(--transition-duration-time-function);
 }
 
 .site-nav-link:hover::after {
@@ -176,17 +178,24 @@
   }
 }
 
-@media screen and (min-width: 1200px) and (max-width: 1280px) {
-  .backdrop {
-    transition: none;
-  }
-}
-
 @media screen and (min-width: 1280px) {
+  .header {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 10;
+    width: 100%;
+    max-width: 1280px;
+    padding-right: 128px;
+    padding-bottom: 15px;
+    padding-left: 128px;
+    backdrop-filter: blur(5px);
+    transform: translate(-50%);
+  }
+
   .backdrop {
     position: static;
     background-color: transparent;
-    width: 100%;
   }
 
   .side-menu {

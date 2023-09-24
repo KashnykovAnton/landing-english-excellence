@@ -95,6 +95,25 @@ body {
   fill: var(--white);
 }
 
+.animation-headline {
+  position: relative;
+  animation: animation 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animation-description {
+  position: relative;
+  animation: animation 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animation-content {
+  position: relative;
+  animation: animation 2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animation-block {
+  animation: animation-block 2s ease-out;
+}
+
 @media screen and (min-width: 768px) {
   .section-headline {
     font-size: 40px;
@@ -124,5 +143,27 @@ body {
   .scroll-btn-icon {
     width: 24px;
     height: 24px;
+  }
+}
+
+@keyframes animation {
+  0% {
+    opacity: 0;
+    bottom: -300px;
+  }
+
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+@keyframes animation-block {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

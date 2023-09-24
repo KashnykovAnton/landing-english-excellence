@@ -1,10 +1,10 @@
 //-------------------------------- HEADER ------------------------------//
-const burgerButton = document.getElementById('burger-button');
-const closeButton = document.getElementById('close-button');
+const burgerButton = document.querySelector('.burger-button');
+const closeButton = document.querySelector('.close-button');
 const siteNavLinks = document.querySelectorAll('.site-nav-link');
 const navList = document.querySelector('.site-nav__list');
 const backdrop = document.querySelector('.backdrop');
-const sideMenu = document.getElementById('side-menu');
+const sideMenu = document.querySelector('.side-menu');
 
 burgerButton.addEventListener('click', () => {
   backdrop.classList.remove('is-hidden');
@@ -12,32 +12,19 @@ burgerButton.addEventListener('click', () => {
   document.body.classList.add('prevent-scroll');
 });
 
-closeButton.addEventListener('click', () => {
-  backdrop.classList.add('is-hidden');
-  sideMenu.classList.add('is-hidden');
-  document.body.classList.remove('prevent-scroll');
-});
+closeButton.addEventListener('click', () => closeMobileMenu());
 
-backdrop.addEventListener('click', event => {
-  if (event.target === event.currentTarget) {
-    backdrop.classList.add('is-hidden');
-    sideMenu.classList.add('is-hidden');
-    document.body.classList.remove('prevent-scroll');
+backdrop.addEventListener('click', e => {
+  if (e.target === e.currentTarget) {
+    closeMobileMenu();
   }
 });
 
-document.querySelectorAll('.smooth-scroll').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth',
-      });
-    }
-  });
-});
+function closeMobileMenu() {
+  backdrop.classList.add('is-hidden');
+  sideMenu.classList.add('is-hidden');
+  document.body.classList.remove('prevent-scroll');
+}
 
 function handleScreenWidthChange() {
   const screenWidth = window.innerWidth;
@@ -52,29 +39,16 @@ function handleScreenWidthChange() {
   if (screenWidth >= 1280) {
     burgerButton.classList.add('is-hidden');
     closeButton.classList.add('is-hidden');
-    sideMenu.classList.remove('is-hidden');
     backdrop.classList.remove('is-hidden');
+    sideMenu.classList.remove('is-hidden');
   }
 
   siteNavLinks.forEach(siteNavLink => {
-    siteNavLink.removeEventListener('click', addIsHidden);
-
+    siteNavLink.removeEventListener('click', closeMobileMenu);
     if (screenWidth < 1280) {
-      siteNavLink.addEventListener('click', addIsHidden);
-    }
-    if (screenWidth >= 1280) {
-      siteNavLink.addEventListener('click', removeIsHidden);
+      siteNavLink.addEventListener('click', closeMobileMenu);
     }
   });
-
-  function addIsHidden() {
-    backdrop.classList.add('is-hidden');
-    document.body.classList.remove('prevent-scroll');
-  }
-
-  function removeIsHidden() {
-    backdrop.classList.remove('is-hidden');
-  }
 }
 
 handleScreenWidthChange();
@@ -87,8 +61,6 @@ window.addEventListener('resize', handleScreenWidthChange);
 const infoBtns = document.querySelectorAll('#info-open-btn');
 const infoBackdrop = document.getElementById('info-backdrop');
 const infoCloseBtn = document.getElementById('info-close-btn');
-
-console.log(infoBtns);
 
 infoBtns.forEach(infoBtn => {
   infoBtn.addEventListener('click', () => {
@@ -216,5 +188,51 @@ window.addEventListener('scroll', () => {
     toTopBtn.classList.add('is-hidden');
   }
 });
+
+// ****************************************************************************//
+
+//-------------------------------- Animation ------------------------------//
+
+const headlines = document.querySelectorAll('.section-headline');
+const descriptions = document.querySelectorAll('.section-description');
+const blocks = document.querySelectorAll('#animation-block');
+const elements = document.querySelectorAll('#animation');
+
+const headlineObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animation-headline');
+    }
+  });
+});
+
+const descriptionObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animation-description');
+    }
+  });
+});
+
+const contentObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animation-content');
+    }
+  });
+});
+
+const blockObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('animation-block');
+    }
+  });
+});
+
+headlines.forEach(headline => headlineObserver.observe(headline));
+descriptions.forEach(description => descriptionObserver.observe(description));
+blocks.forEach(block => blockObserver.observe(block));
+elements.forEach(element => contentObserver.observe(element));
 
 // ****************************************************************************//

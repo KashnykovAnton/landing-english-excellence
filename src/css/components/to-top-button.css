@@ -1,0 +1,29 @@
+.scroll-to-top {
+  position: fixed;
+  background-color: var(--green);
+  opacity: 1;
+  pointer-events: auto;
+  transition: all var(--transition-duration-time-function);
+}
+
+.scroll-to-top.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-to-top:active {
+  transform: scale(1.2);
+  transition: transform var(--transition-duration-time-function);
+}
+
+.scroll-to-top-icon {
+  fill: var(--white);
+  transform: rotate(180deg);
+}
+
+@media screen and (min-width: 1280px) {
+  .scroll-to-top-wrapper {
+    display: none;
+  }
+}
