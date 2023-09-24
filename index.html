@@ -21,8 +21,8 @@
     />
     
     <title>English Excellence</title>
-    <script type="module" crossorigin src="/landing-english-excellence/assets/index-caf43e76.js"></script>
-    <link rel="stylesheet" href="/landing-english-excellence/assets/index-650f9174.css">
+    <script type="module" crossorigin src="/landing-english-excellence/assets/index-c2d4d9b1.js"></script>
+    <link rel="stylesheet" href="/landing-english-excellence/assets/index-c7eb1ed7.css">
   </head>
   <body>
     <header>
@@ -31,13 +31,13 @@
     <a class="logo" href="./index.html">
       english<span class="logo-accent">excellence</span>.
     </a>
-    <button id="burger-button" type="button" class="burger-button">
+    <button type="button" class="burger-button">
       <svg class="burger-icon" aria-label="burger menu icon">
         <use href="/landing-english-excellence/assets/icons-11609326.svg#icon-burger"></use>
       </svg>
     </button>
-    <div class="backdrop">
-      <div class="side-menu" id="side-menu">
+    <div class="backdrop is-hidden">
+      <div class="side-menu is-hidden">
         <button id="close-button" type="button" class="close-button">
           <svg class="close-icon" aria-label="close menu icon">
             <use href="/landing-english-excellence/assets/icons-11609326.svg#icon-close"></use>
@@ -45,21 +45,21 @@
         </button>
         <ul class="site-nav__list">
           <li>
-            <a class="site-nav-link smooth-scroll" href="#about">About us</a>
+            <a class="site-nav-link" href="#about">About us</a>
           </li>
           <li>
-            <a class="site-nav-link smooth-scroll" href="#lessons"
+            <a class="site-nav-link" href="#lessons"
               >Our lessons</a
             >
           </li>
           <li>
-            <a class="site-nav-link smooth-scroll" href="#teachers">Teachers</a>
+            <a class="site-nav-link" href="#teachers">Teachers</a>
           </li>
           <li>
-            <a class="site-nav-link smooth-scroll" href="#reviews">Rewies</a>
+            <a class="site-nav-link" href="#reviews">Rewies</a>
           </li>
           <li>
-            <a class="site-nav-link smooth-scroll" href="#contact"
+            <a class="site-nav-link" href="#contact"
               >Contact us</a
             >
           </li>
@@ -120,7 +120,7 @@
 
     <main>
       <section class="hero-section">
-  <div class="hero-container">
+  <div class="hero-container" id="animation-block">
     <h1 class="hero-headline">
       Discover the joy of learning
       <span class="hero-headline-second-style">English</span> with us!
@@ -137,7 +137,7 @@
 </section>
 
       <section id="about" class="section">
-  <div class="container about-us-container">
+  <div class="container">
     <h2 class="section-headline">
       About <span class="header-underline">Us</span>
     </h2>
@@ -145,7 +145,7 @@
       We are dedicated to providing engaging and effective English language
       courses in a supportive and stimulating learning environment
     </p>
-    <div class="about-content">
+    <div class="about-content" id="animation">
       <ol class="about-list">
         <li class="about-item">
           <p class="about-item-text">Expert, innovative teaching staff</p>
@@ -174,11 +174,6 @@
         />
       </div>
     </div>
-        <a class="scroll-btn scroll-to-top is-hidden" href="#header">
-      <svg class="scroll-btn-icon scroll-to-top-icon" aria-label="scroll to header icon">
-        <use href="/landing-english-excellence/assets/icons-11609326.svg#icon-scroll-down"></use>
-      </svg>
-    </a>
   </div>
 </section>
 
@@ -192,7 +187,7 @@
         promote rapid language acquisition through practical tasks and
         real-world scenarios
       </p>
-    <ul class="lessons-list">
+    <ul class="lessons-list"  id="animation">
       <li class="lessons-list-item">
         <p class="lessons-item-title">Practice</p>
         <p class="lessons-item-price">40&#36; / month</p>
@@ -233,7 +228,7 @@
 </section>
 
       <section class="proposal section">
-  <div class="proposal-container">
+  <div class="proposal-container" id="animation-block">
     <h2 class="visually-hidden">Advantages of learning English with us</h2>
     <p class="proposal-title">
       Master the <span class="proposal-title-accent">Language</span> with Our
@@ -269,7 +264,7 @@
       Discover our team of dedicated educators, committed to guiding you on your
       journey to English proficiency with personalized and engaging instruction
     </p>
-    <ul class="teachers-list">
+    <ul class="teachers-list"  id="animation">
       <li class="teachers-item">
         <div class="teachers-img-wrapper">
           <img
@@ -353,7 +348,7 @@
       message and we'll get back to you shortly.
     </p>
     <div class="application-data">
-      <div class="application-remark-wrapper">
+      <div class="application-remark-wrapper"  id="animation">
         <img
           class="application-remark-img"
           alt="Girl is learning "
@@ -369,7 +364,7 @@
           </p>
         </div>
       </div>
-      <form class="application-form">
+      <form class="application-form"  id="animation">
         <label class="application-input-label">
           <input
             class="application-input"
@@ -504,7 +499,7 @@
       their experiences, progress, and the transformative impact
     </p>
     <div>
-      <ul class="section-reviews-list">
+      <ul class="section-reviews-list"  id="animation">
         <li class="section-reviews-item first-item">
           <div class="section-reviews-card">
             <img
