@@ -221,10 +221,6 @@
     position: static;
   }
 
-  .header {
-    display: block;
-  }
-
   .site-nav__list {
     display: flex;
     align-items: center;

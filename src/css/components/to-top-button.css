@@ -4,6 +4,8 @@
   opacity: 1;
   pointer-events: auto;
   transition: all var(--transition-duration-time-function);
+  border: 2px solid white;
+  z-index: 9;
 }
 
 .scroll-to-top.is-hidden {

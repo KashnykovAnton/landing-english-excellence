@@ -236,3 +236,28 @@ blocks.forEach(block => blockObserver.observe(block));
 elements.forEach(element => contentObserver.observe(element));
 
 // ****************************************************************************//
+
+//-------------------------------- Darkmode ------------------------------//
+
+const darkModeBtn = document.querySelector('.switcher-label');
+
+const changeTextColor = document.querySelectorAll(
+  '.section-description, .section-reviews-student-review, .text-main-teachers'
+);
+const changeBgColor = document.querySelectorAll(
+  '.about-item, .application-input, .application-textarea, .lessons-list-item, .section-reviews-item'
+);
+const changeBgProposalCard = document.querySelector('.proposal-list-card');
+const changeHeaderUnderline = document.querySelectorAll('.header-underline');
+const changeOpacity = document.querySelectorAll('.lessons-item-details');
+
+darkModeBtn.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  changeBgProposalCard.classList.toggle('proposal-list-card-dark-mode');
+  changeTextColor.forEach(item => item.classList.toggle('text-color-dark-mode'));
+  changeBgColor.forEach(item => item.classList.toggle('bg-color-dark-mode'));
+  changeHeaderUnderline.forEach(item => item.classList.toggle('header-underline-dark-mode'));
+  changeOpacity.forEach(item => item.classList.toggle('lessons-item-details-dark-mode'));
+});
+
+// ****************************************************************************//

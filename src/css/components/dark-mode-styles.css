@@ -1,0 +1,23 @@
+.dark-mode {
+  background-color: var(--backdrop);
+}
+
+.text-color-dark-mode {
+  color: var(--dark);
+}
+
+.bg-color-dark-mode {
+  background-color: var(--footer-info-text);
+}
+
+.header-underline-dark-mode::after {
+  background-color: var(--hover-focus-color);
+}
+
+.proposal-list-card-dark-mode {
+  background: var(--hover-focus-color);
+}
+
+.lessons-item-details-dark-mode {
+  opacity: unset;
+}

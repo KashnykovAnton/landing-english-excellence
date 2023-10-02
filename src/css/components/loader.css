@@ -4,7 +4,7 @@
     background-color: var(--white); 
     position: fixed;
     top: 0;
-    z-index: 99999;
+    z-index: 20;
     
     display: flex;
     justify-content: center;

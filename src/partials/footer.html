@@ -103,26 +103,39 @@
       <p class="footer-info-text">
         &#xa9;2023 English Excellence. All rights reserved.
       </p>
-      <ul class="list footer-info-btn-wrapper">
-        <li>
-          <button
-          type="button"
-            class="footer-info-text footer-info-btn"
-            id="info-open-btn"
-          >
-            Privacy Policy
-          </button>
-        </li>
-        <li>
-          <button
-          type="button"
-            class="footer-info-text footer-info-btn"
-            id="terms-open-btn"
-          >
-            Terms of Service
-          </button>
-        </li>
-      </ul>
+      <div class="footer-info-wrapper">
+        <div >
+          <input class="switcher-input" type="checkbox" id="darkmode" />
+          <label class="switcher-label" for="darkmode">
+            <svg class="sun" aria-label="sun icon">
+              <use href="./images/icons.svg#icon-sun"></use>
+            </svg>
+            <svg class="moon" aria-label="moon icon">
+              <use href="./images/icons.svg#icon-moon"></use>
+            </svg>
+          </label>
+        </div>
+        <ul class="list footer-info-btn-wrapper">
+          <li>
+            <button
+              type="button"
+              class="footer-info-text footer-info-btn"
+              id="info-open-btn"
+            >
+              Privacy Policy
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              class="footer-info-text footer-info-btn"
+              id="terms-open-btn"
+            >
+              Terms of Service
+            </button>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
