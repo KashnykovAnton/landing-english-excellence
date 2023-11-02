@@ -17,3 +17,14 @@
 
   --transition-duration-time-function: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Best practice! But I didn't give these styles more attention due to lack of time */
+/* :root[theme='dark'] {
+  --green: #38ae5f;
+  --light-green: #4dc274;
+  --gray: #a7aaab;
+  --white: #b6b6b6;
+  --text-color-grey: #000000;
+  --header-second-style-color: #bee8cc;
+  --hover-focus-color: #bee8cc;
+} */

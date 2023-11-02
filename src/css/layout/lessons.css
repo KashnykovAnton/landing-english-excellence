@@ -71,7 +71,7 @@
   line-height: 1.71;
   letter-spacing: 0em;
   text-align: left;
-  color: #ffffff;
+  color: var(--white);
 
   transition: color var(--transition-duration-time-function),
     background-color var(--transition-duration-time-function);

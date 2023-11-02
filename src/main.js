@@ -260,4 +260,10 @@ darkModeBtn.addEventListener('click', () => {
   changeOpacity.forEach(item => item.classList.toggle('lessons-item-details-dark-mode'));
 });
 
+/* Best practice! But I didn't give these styles more attention due to lack of time */
+// const rootElement = document.documentElement;
+// darkModeBtn.addEventListener('click', () => {
+//   rootElement.hasAttribute('theme') ? rootElement.removeAttribute('theme') : rootElement.setAttribute('theme', 'dark');
+// });
+
 // ****************************************************************************//
